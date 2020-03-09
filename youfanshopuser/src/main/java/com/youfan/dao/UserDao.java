@@ -14,4 +14,7 @@ public class UserDao {
     public User findUserInfo() {
         return userMapper.findUserInfo();
     }
+    public void inseruserInfo(User user) {
+        userMapper.inseruserInfo(user);
+    }
 }

@@ -3,7 +3,16 @@
 <mapper namespace="com.youfan.mapper.UserMapper">
 
     <select id="findUserInfo" resultType="com.youfan.model.User">
-        select name, password, age from user;
+        select name, age, address, telephone, qq, weixin, email, sex, birthday from user;
     </select>
+
+    <insert id="inseruserInfo" parameterType="com.youfan.model.User">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            select LAST_INSERT_ID()
+        </selectKey>
+
+        insert into user (name, account, age, passwordencrypt, address, telephone, qq, weixin, email, sex, birthday)
+        value(#{name}, #{account}, #{age}, #{passwordencrypt}, #{address}, #{telephone}, #{qq}, #{weixin}, #{email}, #{sex}, #{birthday})
+    </insert>
 
 </mapper>
