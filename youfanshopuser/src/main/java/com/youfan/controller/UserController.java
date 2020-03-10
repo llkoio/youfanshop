@@ -4,6 +4,7 @@ import com.youfan.model.User;
 import com.youfan.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -30,6 +31,17 @@ public class UserController {
     public void userregister(User user) {
         userService.inseruserInfo(user);
         return;
+    }
+
+    @RequestMapping(value = "/toupdateUser", method = RequestMethod.GET)
+    public String toupdateUser(User user, Model model) {
+        model.addAttribute("user", user);
+        return "userupdate";
+    }
+
+    @RequestMapping(value = "/findByUserid", method = RequestMethod.GET)
+    public User findByUserid(int id) {
+        return userService.findByUserid(id);
     }
 
 }

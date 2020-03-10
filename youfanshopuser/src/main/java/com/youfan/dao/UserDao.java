@@ -17,4 +17,12 @@ public class UserDao {
     public void inseruserInfo(User user) {
         userMapper.inseruserInfo(user);
     }
+
+    public void updateUser(User user) {
+        userMapper.updateUser(user);
+    }
+
+    public User findByUserid(int id) {
+        return userMapper.findByUserid(id);
+    }
 }

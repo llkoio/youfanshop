@@ -14,5 +14,16 @@
         insert into user (name, account, age, passwordencrypt, address, telephone, qq, weixin, email, sex, birthday)
         value(#{name}, #{account}, #{age}, #{passwordencrypt}, #{address}, #{telephone}, #{qq}, #{weixin}, #{email}, #{sex}, #{birthday})
     </insert>
+    
+    <update id="updateUser" parameterType="com.youfan.model.User">
+        update user set name=#{name}, age=#{age}, address=#{address}, qq=#{qq}, weixin=#{weixin}, email=#{email},
+        sex=#{sex}, birthday=#{birthday}, account=#{account} where id=#{id}
+    </update>
+
+    <select id="findByUserid" parameterType="int" resultType="com.youfan.model.User">
+        select * from user where id = #{value}
+    </select>
+
+
 
 </mapper>

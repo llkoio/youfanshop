@@ -17,4 +17,12 @@ public class UserService {
     public void inseruserInfo(User user) {
         userDao.inseruserInfo(user);
     }
+
+    public void updateUser(User user) {
+        userDao.updateUser(user);
+    }
+
+    public User findByUserid(int id) {
+        return userDao.findByUserid(id);
+    }
 }
