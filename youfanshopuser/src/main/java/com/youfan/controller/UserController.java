@@ -34,14 +34,22 @@ public class UserController {
     }
 
     @RequestMapping(value = "/toupdateUser", method = RequestMethod.GET)
-    public String toupdateUser(User user, Model model) {
+    public String toupdateUser(int id, Model model) {
+        User user = userService.findByUserid(id);
         model.addAttribute("user", user);
         return "userupdate";
     }
 
+    @RequestMapping(value = "updateUser", method = RequestMethod.POST)
+    public void updateUser(User user) {
+        userService.updateUser(user);
+    }
+
     @RequestMapping(value = "/findByUserid", method = RequestMethod.GET)
-    public User findByUserid(int id) {
-        return userService.findByUserid(id);
+    public String findByUserid(int id, Model model) {
+        User user = userService.findByUserid(id);
+        model.addAttribute(user);
+        return "userview";
     }
 
 }

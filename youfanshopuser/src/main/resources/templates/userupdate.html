@@ -8,11 +8,11 @@
 <form action="updateUser" method="post">
     <input type="hidden" name="id" th:value="${user.id}"/>
     <input type="hidden" name="sex" th:value="${user.sex}"/>
-    <input type="hidden" name="telphone" th:value="${user.telphone}"/>
+    <input type="hidden" name="telphone" th:value="${user.telephone}"/>
     <input type="hidden" name="passwordencrypt" th:value="${user.passwordencrypt}"/>
     姓名：<input name="name" th:value="${user.name}"/><br/>
     用户名：<input name="account" th:value="${user.account}"/><br/>
-    手机号码：<span th:text="${user.telphone}" /><br/>
+    手机号码：<span th:text="${user.telephone}" /><br/>
     qq：<input name="qq" th:value="${user.qq}"/><br/>
     微信：<input name="weixin" th:value="${user.weixin}"/><br/>
     email:<input name="email" th:value="${user.email}"/><br/>
