@@ -2,8 +2,11 @@ package com.youfan.dao;
 
 import com.youfan.mapper.UserMapper;
 import com.youfan.model.User;
+import com.youfan.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 public class UserDao {
@@ -11,11 +14,8 @@ public class UserDao {
     @Autowired
     UserMapper userMapper;
 
-    public User findUserInfo() {
-        return userMapper.findUserInfo();
-    }
-    public void inseruserInfo(User user) {
-        userMapper.inseruserInfo(user);
+    public void insertUserInfo(User user) {
+        userMapper.insertUserInfo(user);
     }
 
     public void updateUser(User user) {
@@ -24,5 +24,13 @@ public class UserDao {
 
     public User findByUserid(int id) {
         return userMapper.findByUserid(id);
+    }
+
+    public List<User> queryUserByVo(UserVo userVo) {
+        return userMapper.queryUserByVo(userVo);
+    }
+
+    public void deleteUserById(int id){
+        userMapper.deleteUserById(id);
     }
 }

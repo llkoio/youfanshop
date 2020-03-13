@@ -19,18 +19,18 @@
         <td>账号</td>
         <td>操作</td>
     </tr>
-    <tr th:each="user: ${listuser}">
+    <tr th:each="user: ${userList}">
         <td th:text="${user.name}">youfan</td>
         <td th:text="${user.age}">2.41</td>
         <td th:text="${user.address}">2.41</td>
-        <td th:text="${user.telphone}">2.41</td>
+        <td th:text="${user.telephone}">2.41</td>
         <td th:text="${user.qq}">2.41</td>
         <td th:text="${user.weixin}">2.41</td>
         <td th:text="${user.email}">2.41</td>
         <td th:text="${user.sex}">2.41</td>
         <td th:text="${user.birthday}">2.41</td>
         <td th:text="${user.account}">2.41</td>
-        <td><a href="#" th:href="@{/findByUserid(id=${user.id})}">查看</a>|<a href="#" th:href="@{/toupdateUser(id=${user.id})}">修改</a>|<a href="#" th:href="@{/deleteuserbyid(id=${user.id})}">删除</a></td>
+        <td><a href="#" th:href="@{/findbyuserid(id=${user.id})}">查看</a>|<a href="#" th:href="@{/toupdateuser(id=${user.id})}">修改</a>|<a href="#" th:href="@{/deleteuserbyid(id=${user.id})}">删除</a></td>
     </tr>
 </table>
 </body>
