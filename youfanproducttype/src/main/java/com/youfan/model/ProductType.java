@@ -8,6 +8,7 @@ public class ProductType {
     private String productTypeName;
     private String productTypeDescription;
     private String productTypeGrade; // category，1，2，3，1 is the biggest one
+    private Integer productTypeParentId; // if the category is 1,parentid id is -1
 
     public int getId() {
         return id;
@@ -41,13 +42,11 @@ public class ProductType {
         this.productTypeGrade = productTypeGrade;
     }
 
-    public int getProductTypeParentId() {
+    public Integer getProductTypeParentId() {
         return productTypeParentId;
     }
 
-    public void setProductTypeParentId(int productTypeParentId) {
+    public void setProductTypeParentId(Integer productTypeParentId) {
         this.productTypeParentId = productTypeParentId;
     }
-
-    private int productTypeParentId; // if the category is 1,parentid id is -1
 }

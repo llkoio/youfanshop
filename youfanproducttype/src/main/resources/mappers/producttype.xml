@@ -6,10 +6,17 @@
         <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
             SELECT LAST_INSERT_ID()
         </selectKey>
-        insert into product_type(pro_type_name,pro_type_desc,pro_type_grade,pro_type_parent_id) value(#{product_type_name},#{pro_type_desc},#{pro_type_grade},#{pro_type_parent_id})
+        insert into product_type(pro_type_name,pro_type_desc,pro_type_grade,pro_type_parent_id) value(#{productTypeName},#{productTypeDescription},#{productTypeGrade},#{productTypeParentId})
     </insert>
-    <select id="findProductytpeByid" parameterType="int" resultType="com.youfan.model.ProductType">
-        select * from producttype where id = #{value}
+    <resultMap type="com.youfan.model.ProductType" id="productTypeMap">
+        <id column="id" property="id"/>
+        <id column="pro_type_name" property="productTypeName" />
+        <id column="pro_type_desc" property="productTypeDescription" />
+        <id column="pro_type_grade" property="productTypeGrade" />
+        <id column="pro_type_parent_id" property="productTypeParentId" />
+    </resultMap>
+    <select id="findProductTypeById" parameterType="Integer" resultMap="productTypeMap">
+        select * from product_type where id = #{value}
     </select>
 
     <select id="listallProductytpe"  resultType="com.youfan.model.ProductType">

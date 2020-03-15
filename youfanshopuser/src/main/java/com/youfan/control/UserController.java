@@ -1,4 +1,4 @@
-package com.youfan.controller;
+package com.youfan.control;
 
 import com.youfan.model.User;
 import com.youfan.service.UserService;
