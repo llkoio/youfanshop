@@ -27,4 +27,8 @@
         update producttype set producttypename=#{producttypename},producttypedescription=#{producttypedescription} where id=#{id}
     </update>
 
+    <update id="updateProductType" parameterType="com.youfan.model.ProductType">
+        update product_type set product_type_name = #{productTypeName}, product_type_desc=#{productTypedescription}
+        where id = #{id}
+    </update>
 </mapper>
