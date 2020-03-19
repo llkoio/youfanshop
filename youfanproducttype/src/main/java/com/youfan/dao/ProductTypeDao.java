@@ -18,4 +18,8 @@ public class ProductTypeDao {
     public ProductType findProductTypeById(Integer id) {
         return productTypeMapper.findProductTypeById(id);
     }
+
+    public void updateProductType(ProductType productType) {
+        productTypeMapper.updateProductType(productType);
+    }
 }

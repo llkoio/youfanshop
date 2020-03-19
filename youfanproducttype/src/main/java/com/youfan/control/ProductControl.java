@@ -27,6 +27,18 @@ public class ProductControl {
             productType.setId(-1);
         }
         model.addAttribute("productType", productType);
-        return "product_type_add";
+        return "add_product_type";
+    }
+
+    @RequestMapping(value = "/to_update_product_type", method = RequestMethod.GET)
+    public String toUpdateProductType(Integer id, Model model) {
+        ProductType productType = productTypeService.findProductTypeById(id);
+        model.addAttribute("productType", productType);
+        return "update_product_type";
+    }
+
+    @RequestMapping(value = "/update_product_type", method = RequestMethod.POST)
+    public void updateProductType(ProductType productType, Model model) {
+        productTypeService.UpdateProductType(productType);
     }
 }

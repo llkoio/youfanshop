@@ -5,5 +5,5 @@ import com.youfan.model.ProductType;
 public interface ProductTypeMapper {
     void insertProductType(ProductType productType);
     ProductType findProductTypeById(Integer id);
-    pubic void updateProductType(ProductType productType);
+    void updateProductType(ProductType productType);
 }

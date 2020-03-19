@@ -18,4 +18,8 @@ public class ProductTypeService {
     public ProductType findProductTypeById(Integer id) {
         return productTypeDao.findProductTypeById(id);
     }
+
+    public void UpdateProductType(ProductType productType) {
+        productTypeDao.updateProductType(productType);
+    }
 }
