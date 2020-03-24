@@ -22,12 +22,11 @@ public class ProductControl {
     @RequestMapping(value = "/findProductTypeById", method = RequestMethod.GET)
     public String findProductTypeById(Integer id, Model model) {
         ProductType productType = productTypeService.findProductTypeById(id);
-        if (null == productType) {
-            productType = new ProductType();
-            productType.setId(-1);
-        }
+        int productTypeParentId = productType.getProductTypeParentId();
+        ProductType parentProductType = productTypeService.findProductTypeById(productTypeParentId);
         model.addAttribute("productType", productType);
-        return "add_product_type";
+        model.addAttribute("parentProductType", parentProductType);
+        return "view_product_type";
     }
 
     @RequestMapping(value = "/to_update_product_type", method = RequestMethod.GET)

@@ -1,0 +1,12 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+    父类：<span th:text="${parentProductType.productTypeName}"></span>
+    产品类别名称：<span th:text="${productType.productTypeName}"></span>
+    产品类别描述：<span th:text="${productType.productTypeDescription}"></span>
+    等级：<span th:text="${productType.productTypeGrade}"></span>
+    <input type="submit" th:value="submit"/>
+</body>
+</html>
