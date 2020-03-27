@@ -33,43 +33,22 @@
     </update>
 
     <select id="queryListByVo" parameterType="com.youfan.vo.ProductTypeVo" resultType="com.youfan.model.ProductType">
-        select * from user
+        select * from product_type
         <where>
             <include refid="consutoql"></include>
         </where>
     </select>
 
     <sql id="consutoql" >
-        <if test="constomUser != null">
-            <if test="constomUser.name!=null and constomUser.name!=''">
-                and name = "${constomUser.name}"
+        <if test="constomProductType != null">
+            <if test="constomProductType.productTypeName != null and constomProductType.productTypeName != ''">
+                and productTypeName = "${constomProductType.productTypeName}"
             </if>
-            <if test="constomUser.age!=null and constomUser.age!='' ">
-                and age = "${constomUser.age}"
+            <if test="constomProductType.productTypeDescription != null and constomProductType.productTypeDescription != ''">
+                and productTypeDescription = "${constomProductType.productTypeDescription}"
             </if>
-            <if test="constomUser.address!=null and constomUser.address!='' ">
-                and address = "${constomUser.address}"
-            </if>
-            <if test="constomUser.telphone!=null and constomUser.telphone!='' ">
-                and telphone = "${constomUser.telphone}"
-            </if>
-            <if test="constomUser.qq!=null and constomUser.qq!='' ">
-                and qq = "${constomUser.qq}"
-            </if>
-            <if test="constomUser.weixin!=null and constomUser.weixin!='' ">
-                and weixin = "${constomUser.weixin}"
-            </if>
-            <if test="constomUser.email!=null and constomUser.email!='' ">
-                and email = "${constomUser.email}"
-            </if>
-            <if test="constomUser.sex!=null and constomUser.sex!='' ">
-                and sex = "${constomUser.sex}"
-            </if>
-            <if test="constomUser.birthday!=null and constomUser.birthday!='' ">
-                and birthday = "${constomUser.birthday}"
-            </if>
-            <if test="constomUser.account!=null and constomUser.account!='' ">
-                and account = "${constomUser.account}"
+            <if test="constomProductType.productTypeGrade != null and constomProductType.productTypeGrade != ''">
+                and productTypeGrade = "${constomProductType.productTypeGrade}"
             </if>
         </if>
     </sql>

@@ -2,8 +2,11 @@ package com.youfan.dao;
 
 import com.youfan.mapper.ProductTypeMapper;
 import com.youfan.model.ProductType;
+import com.youfan.vo.ProductTypeVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 public class ProductTypeDao {
@@ -21,5 +24,9 @@ public class ProductTypeDao {
 
     public void updateProductType(ProductType productType) {
         productTypeMapper.updateProductType(productType);
+    }
+
+    public List<ProductType> queryListByVo(ProductTypeVo productTypeVo) {
+        return productTypeMapper.queryListByVo(productTypeVo);
     }
 }
