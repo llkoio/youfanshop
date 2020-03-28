@@ -52,4 +52,8 @@
             </if>
         </if>
     </sql>
+
+    <delete id="deleteProductTypeById" parameterType="int">
+        delete from product_type where id = #{id}
+    </delete>
 </mapper>
