@@ -29,4 +29,8 @@ public class ProductTypeService {
     public List<ProductType> queryListByVo(ProductTypeVo productTypeVo) {
         return productTypeDao.queryListByVo(productTypeVo);
     }
+
+    public void deleteProductTypeById(int id) {
+        productTypeDao.deleteProductTypeById(id);
+    }
 }

@@ -51,4 +51,9 @@ public class ProductControl {
         model.addAttribute("productTypes", productTypes);
         return "list";
     }
+
+    @RequestMapping(value = "/delete_product_type_by_id", method = RequestMethod.GET)
+    public void deleteProductTypeById(int id) {
+        productTypeService.deleteProductTypeById(id);
+    }
 }

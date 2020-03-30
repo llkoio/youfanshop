@@ -1,5 +1,7 @@
 package com.youfan.vo;
 
+import com.youfan.model.ProductType;
+
 /**
  * @ProjectName: youfanshop
  * @package: com.youfan.vo
@@ -9,6 +11,6 @@ package com.youfan.vo;
  * @CreateDateAndTime: 2020/3/26 1:16
  * @version: v1.0
  */
-public class ConstomProductType extends ProductTypeVo {
+public class ConstomProductType extends ProductType {
 
 }

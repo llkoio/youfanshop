@@ -29,4 +29,8 @@ public class ProductTypeDao {
     public List<ProductType> queryListByVo(ProductTypeVo productTypeVo) {
         return productTypeMapper.queryListByVo(productTypeVo);
     }
+
+    public void deleteProductTypeById(int id) {
+        productTypeMapper.deleteProductTypeById(id);
+    }
 }

@@ -16,7 +16,7 @@
         <td th:text="${productType.productTypeName}">youfan</td>
         <td th:text="${productType.productTypeDescription}">2.41</td>
         <td th:text="${productType.productTypeGrade}">2.41</td>
-        <td><a href="#" th:href="@{/findProductTypeById(id=${productType.id})}">查看</a>|<a href="#" th:href="@{/to_update_product_type(id=${productType.id})}">修改</a>|<a href="#" th:href="@{/deleteuserbyid(id=${user.id})}">删除</a></td>
+        <td><a href="#" th:href="@{/findProductTypeById(id=${productType.id})}">查看</a>|<a href="#" th:href="@{/to_update_product_type(id=${productType.id})}">修改</a>|<a href="#" th:href="@{/delete_product_type_by_id(id=${productType.id})}">删除</a></td>
     </tr>
 </table>
 </body>

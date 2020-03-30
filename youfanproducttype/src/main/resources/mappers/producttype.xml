@@ -42,13 +42,13 @@
     <sql id="consutoql" >
         <if test="constomProductType != null">
             <if test="constomProductType.productTypeName != null and constomProductType.productTypeName != ''">
-                and productTypeName = "${constomProductType.productTypeName}"
+                and pro_type_name = "${constomProductType.productTypeName}"
             </if>
             <if test="constomProductType.productTypeDescription != null and constomProductType.productTypeDescription != ''">
-                and productTypeDescription = "${constomProductType.productTypeDescription}"
+                and pro_type_desc = "${constomProductType.productTypeDescription}"
             </if>
             <if test="constomProductType.productTypeGrade != null and constomProductType.productTypeGrade != ''">
-                and productTypeGrade = "${constomProductType.productTypeGrade}"
+                and pro_type_grade = "${constomProductType.productTypeGrade}"
             </if>
         </if>
     </sql>
