@@ -27,6 +27,10 @@ public class ProductControl {
         ProductType productType = productTypeService.findProductTypeById(id);
         int productTypeParentId = productType.getProductTypeParentId();
         ProductType parentProductType = productTypeService.findProductTypeById(productTypeParentId);
+        if (null == parentProductType) {
+            parentProductType = new ProductType();
+            parentProductType.setProductTypeName("");
+        }
         model.addAttribute("productType", productType);
         model.addAttribute("parentProductType", parentProductType);
         return "view_product_type";

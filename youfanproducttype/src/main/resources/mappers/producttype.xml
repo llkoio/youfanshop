@@ -32,7 +32,7 @@
         where id = #{id}
     </update>
 
-    <select id="queryListByVo" parameterType="com.youfan.vo.ProductTypeVo" resultType="com.youfan.model.ProductType">
+    <select id="queryListByVo" parameterType="com.youfan.vo.ProductTypeVo" resultMap="productTypeMap">
         select * from product_type
         <where>
             <include refid="consutoql"></include>
