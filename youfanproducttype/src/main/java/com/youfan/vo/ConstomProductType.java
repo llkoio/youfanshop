@@ -1,6 +1,7 @@
 package com.youfan.vo;
 
 import com.youfan.model.ProductType;
+import org.springframework.stereotype.Component;
 
 /**
  * @ProjectName: youfanshop
@@ -11,6 +12,7 @@ import com.youfan.model.ProductType;
  * @CreateDateAndTime: 2020/3/26 1:16
  * @version: v1.0
  */
+@Component
 public class ConstomProductType extends ProductType {
 
 }
